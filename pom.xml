@@ -5,7 +5,7 @@
 
 	<groupId>guru.springframework</groupId>
 	<artifactId>spring-boot-docker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>spring-boot-docker</name>
@@ -23,7 +23,7 @@
 		<java.version>1.8</java.version>
 
 		<!--set this to your docker acct name-->
-		<docker.image.prefix>springframeworkguru</docker.image.prefix>
+		<docker.image.prefix>jakvra</docker.image.prefix>
 
 		<!--Set to name of project-->
 		<docker.image.name>springbootdocker</docker.image.name>
@@ -66,7 +66,7 @@
 
 				<configuration>
 
-                    <!--<dockerHost>http://127.0.0.1:2375</dockerHost>-->
+<!--                    <dockerHost>http://127.0.0.1:2375</dockerHost>-->
                     <dockerHost>unix:///var/run/docker.sock</dockerHost>
 
                     <verbose>true</verbose>
@@ -91,6 +91,8 @@
 			</plugin>
 		</plugins>
 	</build>
+
+<!--    NOTE: settings.xml - right click - maven -> open settings.xml-->
 	
 
 </project>
