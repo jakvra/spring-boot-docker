@@ -71,7 +71,7 @@
 
                 <configuration>
 
-                    <!--<dockerHost>http://127.0.0.1:2375</dockerHost>-->
+<!--                    <dockerHost>http://127.0.0.1:2375</dockerHost>-->
                     <dockerHost>unix:///var/run/docker.sock</dockerHost>
 
                     <verbose>true</verbose>
@@ -109,7 +109,7 @@
 
                         <!-- MY SQL container -->
                         <image>
-                            <name>mysql</name>
+                            <name>mysql:5</name>
                             <alias>mysqldb</alias>
 							<run>
                                 <!-- expose port for db -->
@@ -172,14 +172,14 @@
                                 <wait>
                                     <time>10000</time>
                                 </wait>
-<!--                                <wait>-->
-<!--                                    <http>-->
-<!--                                        <url>http://localhost:8081/health</url>-->
-<!--                                        <method>GET</method>-->
-<!--                                        <status>200..399</status>-->
-<!--                                    </http>-->
-<!--                                    <time>75000</time>-->
-<!--                                </wait>-->
+                                <wait>
+                                    <http>
+                                        <url>http://localhost:8081/health</url>
+                                        <method>GET</method>
+                                        <status>200..399</status>
+                                    </http>
+                                    <time>75000</time>
+                                </wait>
                             </run>
                         </image>
                     </images>
