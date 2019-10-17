@@ -35,6 +35,7 @@ public class IndexController {
 
         model.addAttribute("products", productService.listProducts());
 
+        //Send Page view event
         PageViewEvent pageViewEvent = new PageViewEvent();
         pageViewEvent.setPageUrl("springframework.guru/");
         pageViewEvent.setPageViewDate(new Date());
